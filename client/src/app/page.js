@@ -1,100 +1,325 @@
-import Image from "next/image";
+import {
+  Instagram,
+  Youtube,
+  PinIcon,
+  InstagramIcon,
+  Star,
+  X,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-[#FFF2E6]">
+      {/* Top Banner */}
+      <div className="relative bg-[#1D1B4B] text-white text-center py-2 text-sm">
+        <span>Printed Hard Cover of your book available for only 29.90$</span>
+        <button
+          className="absolute right-4 top-1/2 -translate-y-1/2"
+          aria-label="Close banner">
+          <X className="h-4 w-4" />
+        </button>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+      {/* Header */}
+      <header className="container mx-auto px-4 py-4">
+        <nav className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-[#1D1B4B]">
+            <a
+              href="#"
+              className="hover:underline">
+              Best Seller: Print and Audio
+            </a>
+            <a
+              href="#"
+              className="hover:underline">
+              About Us
+            </a>
+            <a
+              href="#"
+              className="hover:underline">
+              Testimonials
+            </a>
+            <a
+              href="#"
+              className="hover:underline">
+              Pricing
+            </a>
+            <a
+              href="#"
+              className="hover:underline">
+              Our Features
+            </a>
+          </div>
+
+          <div className="text-center text-2xl font-bold text-[#1D1B4B]">
+            Scarlett Panda
+          </div>
+
+          <div className="flex items-center gap-4">
+            <div className="flex gap-2">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="text-[#1D1B4B] hover:opacity-80">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="text-[#1D1B4B] hover:opacity-80">
+                <Youtube className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                aria-label="Pinterest"
+                className="text-[#1D1B4B] hover:opacity-80">
+                <PinIcon className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                aria-label="TikTok"
+                className="text-[#1D1B4B] hover:opacity-80">
+                <InstagramIcon className="h-5 w-5" />
+              </a>
+            </div>
+            <button className="rounded-full bg-[#1D1B4B] px-6 py-2 text-white hover:bg-[#2d2974] transition-colors">
+              Generate your story
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Section 1 */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
+          <div className="w-full md:w-1/2">
+            <img
+              src="/placeholder.svg?height=600&width=600"
+              alt="Child with magical unicorn"
+              className="rounded-3xl"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="w-full text-center md:w-1/2 md:text-left">
+            <h1 className="mb-8 text-4xl font-bold leading-tight text-[#1D1B4B] md:text-5xl lg:text-6xl">
+              Personalized AI-Powered Books: Inspiring Growth and Imagination
+              for Your Child
+            </h1>
+            <button className="rounded-full bg-[#1D1B4B] px-8 py-4 text-lg text-white hover:bg-[#2d2974] transition-colors">
+              Start Your Story!
+            </button>
+            <p className="mt-4 text-sm text-gray-600">
+              No credit card required
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+      <section className="container mx-auto px-4 py-12">
+        <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
+          <div className="w-full text-center md:w-1/2 md:text-left">
+            <h1 className="mb-8 text-4xl font-bold leading-tight text-[#1D1B4B] md:text-5xl lg:text-6xl">
+              Empowering Young Minds with Personalized Stories: Tailored Books
+              to Foster Confidence and Curiosity.
+            </h1>
+          </div>
+
+          <div className="w-full md:w-1/2">
+            <img
+              src="/placeholder.svg?height=600&width=600"
+              alt="Child with magical unicorn"
+              className="rounded-3xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold text-[#1D1B4B]">
+            Why Choose Scarlett Panda?
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "AI-Powered Stories",
+                description:
+                  "Create unique, personalized stories using advanced AI technology in just seconds.",
+              },
+              {
+                title: "Beautiful Illustrations",
+                description:
+                  "Each story comes with stunning, custom illustrations that bring your tale to life.",
+              },
+              {
+                title: "Print & Digital",
+                description:
+                  "Get your story in both digital format and beautiful printed hardcover.",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="bg-[#FFF2E6] p-6 rounded-lg">
+                <h3 className="mb-4 text-xl font-bold text-[#1D1B4B]">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold text-[#1D1B4B]">
+            What Our Users Say
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="bg-white p-6 rounded-lg shadow">
+                <div className="mb-4 flex text-yellow-400">
+                  {[...Array(5)].map((_, index) => (
+                    <Star
+                      key={index}
+                      className="h-5 w-5 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="mb-4 text-gray-600">
+                  "Amazing experience! The stories are so personal and engaging.
+                  My children love them!"
+                </p>
+                <p className="font-semibold text-[#1D1B4B]">Happy Parent</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#1D1B4B] py-16 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-6 text-3xl font-bold">
+            Ready to Create Your Story?
+          </h2>
+          <p className="mb-8 text-lg">
+            Start your journey with Scarlett Panda today!
+          </p>
+          <button className="rounded-full bg-white px-8 py-4 text-lg text-[#1D1B4B] hover:bg-gray-100 transition-colors">
+            Start Creating Now
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#1D1B4B] py-8 text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-8 md:grid-cols-4">
+            <div>
+              <h3 className="mb-4 font-bold">Scarlett Panda</h3>
+              <p className="text-sm opacity-80">
+                Creating magical stories for children around the world.
+              </p>
+            </div>
+            <div>
+              <h3 className="mb-4 font-bold">Quick Links</h3>
+              <ul className="space-y-2 text-sm opacity-80">
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 font-bold">Legal</h3>
+              <ul className="space-y-2 text-sm opacity-80">
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:underline">
+                    Cookie Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 font-bold">Follow Us</h3>
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="hover:opacity-80">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="YouTube"
+                  className="hover:opacity-80">
+                  <Youtube className="h-5 w-5" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Pinterest"
+                  className="hover:opacity-80">
+                  <PinIcon className="h-5 w-5" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="TikTok"
+                  className="hover:opacity-80">
+                  <InstagramIcon className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-white/20 pt-8 text-center text-sm opacity-80">
+            <p>
+              &copy; {new Date().getFullYear()} Scarlett Panda. All rights
+              reserved.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
