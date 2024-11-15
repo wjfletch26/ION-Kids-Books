@@ -1,312 +1,271 @@
-READ ME  
+READ ME
 
-Please go through doc and watch the videos Ive included.  
+Please go through doc and watch the videos Ive included.
 
-Front-End dev environment 
+Front-End dev environment
 
-To get the app to run you must be in the client folder.  
+To get the app to run you must be in the client folder.
 
-In the terminal type: 	cd client.  
+In the terminal type: cd client.
 
-Then type: 			npm run 	 
+Then type: npm run
 
-This should produce the project on Localhost 3000 
+This should produce the project on Localhost 3000
 
- 
+Back-End
 
-Back-End  
+Still working on getting everything set up. Go to bottom to see instructions.
 
-Still working on getting everything set up. Go to bottom to see instructions.  
+To create react app
 
- 
+https://legacy.reactjs.org/docs/create-a-new-react-app.html
 
-To create react app  
+WATCH
 
-https://legacy.reactjs.org/docs/create-a-new-react-app.html 
+How to use Tailwind CSS in React JS for Beginners | Install Tailwind CSS in React App from Scratch
 
- 
+Pay attention to the components section at the end.
 
-WATCH 
+https://www.youtube.com/watch?v=1WdL1TLfkYo
+fasdfasd
 
-How to use Tailwind CSS in React JS for Beginners | Install Tailwind CSS in React App from Scratch 
+PLEASE WATCH
 
-Pay attention to the components section at the end.  
+How to use GIT when working with a team?
 
-https://www.youtube.com/watch?v=1WdL1TLfkYo 
+This will teach you about git commit from the terminal. You may want
 
+https://www.youtube.com/watch?v=jhtbhSpV5YA
 
+Here is a cheat sheet
 
-PLEASE WATCH 
+https://training.github.com/downloads/github-git-cheat-sheet/
 
-How to use GIT when working with a team?  
+BACK END INSTRUCTIONS & SETUP
 
-This will teach you about git commit from the terminal. You may want 
+Feel free to confirm i set up the environment correctly. I completed up to STEP 4.
 
-https://www.youtube.com/watch?v=jhtbhSpV5YA 
+If text below doesnt show up well follow this link: https://chatgpt.com/share/67353100-80d4-8005-a086-cb676648cf70
 
+Here’s a step-by-step guide to setting up your development environment in VS Code for your React/React Native and Express app with Firebase Auth and either MongoDB or AWS for database management.
 
+1. Install Necessary Tools
 
- 
+Node.js: Download and install Node.js. This will include npm, the Node Package Manager.
 
- 
+VS Code: Ensure you have the latest version of VS Code.
 
- 
+Git: Install Git if you haven’t yet, as version control is crucial. Download it from Git's official site.
 
- 
+MongoDB CLI (optional): If you're using MongoDB, install the MongoDB CLI to interact with MongoDB.
 
+2. Set Up Your VS Code Workspace
 
+Open VS Code and create a folder for your project. You can name it something like my-app.
 
-Here is a cheat sheet 
+Inside your project folder, open the Integrated Terminal (Ctrl + ~ on Windows/Linux, Cmd + ~ on macOS).
 
-https://training.github.com/downloads/github-git-cheat-sheet/ 
+3. Initialize Git and Create a Monorepo (Optional)
 
- 
+If you want your front and backends in the same repo, create separate folders for each:
 
-BACK END INSTRUCTIONS & SETUP  
+bash
 
-Feel free to confirm i set up the environment correctly. I completed up to STEP 4.  
+Copy code
 
-If text below doesnt show up well follow this link: https://chatgpt.com/share/67353100-80d4-8005-a086-cb676648cf70  
+mkdir client backend
 
-Here’s a step-by-step guide to setting up your development environment in VS Code for your React/React Native and Express app with Firebase Auth and either MongoDB or AWS for database management. 
+Initialize Git:
 
-1. Install Necessary Tools 
+bash
 
-Node.js: Download and install Node.js. This will include npm, the Node Package Manager. 
+Copy code
 
-VS Code: Ensure you have the latest version of VS Code. 
+git init
 
-Git: Install Git if you haven’t yet, as version control is crucial. Download it from Git's official site. 
+4. Set Up Frontend (React + Tailwind)
 
-MongoDB CLI (optional): If you're using MongoDB, install the MongoDB CLI to interact with MongoDB. 
+Navigate to your client folder:
 
-2. Set Up Your VS Code Workspace 
+bash
 
-Open VS Code and create a folder for your project. You can name it something like my-app. 
+Copy code
 
-Inside your project folder, open the Integrated Terminal (Ctrl + ~ on Windows/Linux, Cmd + ~ on macOS). 
+cd client
 
-3. Initialize Git and Create a Monorepo (Optional) 
+Create a new React app:
 
-If you want your front and backends in the same repo, create separate folders for each: 
+bash
 
-bash 
+Copy code
 
-Copy code 
+npx create-react-app .
 
-mkdir client backend 
- 
+Install Tailwind CSS:
 
-Initialize Git: 
+bash
 
-bash 
+Copy code
 
-Copy code 
+npm install -D tailwindcss
+npx tailwindcss init
 
-git init 
- 
+Configure tailwind.config.js and your CSS file. You can follow Tailwind’s guide to integrate it with Create React App.
 
-4. Set Up Frontend (React + Tailwind) 
+5. Set Up React Native
 
-Navigate to your client folder: 
+Navigate back to the root directory:
 
-bash 
+bash
 
-Copy code 
+Copy code
 
-cd client 
- 
+cd ..
 
-Create a new React app: 
+Use the expo CLI for easier setup (recommended for beginners):
 
-bash 
+bash
 
-Copy code 
+Copy code
 
-npx create-react-app . 
- 
+npm install -g expo-cli
+expo init mobile
 
-Install Tailwind CSS: 
+Choose a template, then install NativeWind for Tailwind-style design in React Native:
 
-bash 
+bash
 
-Copy code 
+Copy code
 
-npm install -D tailwindcss 
-npx tailwindcss init 
- 
+cd mobile
+npm install nativewind
 
-Configure tailwind.config.js and your CSS file. You can follow Tailwind’s guide to integrate it with Create React App. 
+6. Set Up Backend (Express + Firebase Auth)
 
-5. Set Up React Native 
+Navigate to the backend folder:
 
-Navigate back to the root directory: 
+bash
 
-bash 
+Copy code
 
-Copy code 
+cd ../backend
 
-cd .. 
- 
+Initialize a new Node.js project and install dependencies:
 
-Use the expo CLI for easier setup (recommended for beginners): 
+bash
 
-bash 
+Copy code
 
-Copy code 
+npm init -y
+npm install express mongoose dotenv firebase-admin cors
 
-npm install -g expo-cli 
-expo init mobile 
- 
+Create a file structure for your backend:
 
-Choose a template, then install NativeWind for Tailwind-style design in React Native: 
+bash
 
-bash 
+Copy code
 
-Copy code 
+mkdir src
+touch src/index.js .env
 
-cd mobile 
-npm install nativewind 
- 
+Set up a basic Express server in src/index.js:
 
-6. Set Up Backend (Express + Firebase Auth) 
+javascript
 
-Navigate to the backend folder: 
+Copy code
 
-bash 
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const app = express();
 
-Copy code 
+app.use(cors());
+app.use(express.json());
 
-cd ../backend 
- 
+app.get('/', (req, res) => {
+res.send('Hello from Express!');
+});
 
-Initialize a new Node.js project and install dependencies: 
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-bash 
+Configure .env to add sensitive data (e.g., MongoDB URI, Firebase credentials).
 
-Copy code 
+7. Firebase Auth Setup
 
-npm init -y 
-npm install express mongoose dotenv firebase-admin cors 
- 
+Go to Firebase Console, create a project, and enable Authentication for web and mobile.
 
-Create a file structure for your backend: 
+Install Firebase in both client and mobile folders:
 
-bash 
+bash
 
-Copy code 
+Copy code
 
-mkdir src 
-touch src/index.js .env 
- 
+npm install firebase
 
-Set up a basic Express server in src/index.js: 
+In your React and React Native code, configure Firebase Auth using Firebase SDK. You’ll use different configurations for each platform (web/mobile).
 
-javascript 
+8. Configure Database (MongoDB or AWS DynamoDB)
 
-Copy code 
+MongoDB Atlas: If you choose MongoDB, create an account on MongoDB Atlas and set up a cluster. Add your MongoDB URI to .env:
 
-const express = require('express'); 
-const cors = require('cors'); 
-const mongoose = require('mongoose'); 
-const app = express(); 
- 
-app.use(cors()); 
-app.use(express.json()); 
- 
-app.get('/', (req, res) => { 
-  res.send('Hello from Express!'); 
-}); 
- 
-const PORT = process.env.PORT || 5000; 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); 
- 
+plaintext
 
-Configure .env to add sensitive data (e.g., MongoDB URI, Firebase credentials). 
+Copy code
 
-7. Firebase Auth Setup 
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/mydatabase
 
-Go to Firebase Console, create a project, and enable Authentication for web and mobile. 
+AWS DynamoDB: Alternatively, you could configure DynamoDB with the AWS SDK.
 
-Install Firebase in both client and mobile folders: 
+9. Add Scripts to Package.json
 
-bash 
+In each package.json, add scripts to start your app. In client/package.json:
 
-Copy code 
+json
 
-npm install firebase 
- 
+Copy code
 
-In your React and React Native code, configure Firebase Auth using Firebase SDK. You’ll use different configurations for each platform (web/mobile). 
+"scripts": {
+"start": "react-scripts start",
+"build": "react-scripts build"
+}
 
-8. Configure Database (MongoDB or AWS DynamoDB) 
+In backend/package.json:
 
-MongoDB Atlas: If you choose MongoDB, create an account on MongoDB Atlas and set up a cluster. Add your MongoDB URI to .env: 
+json
 
-plaintext 
+Copy code
 
-Copy code 
+"scripts": {
+"start": "node src/index.js"
+}
 
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/mydatabase 
- 
+10. Test Your Environment
 
-AWS DynamoDB: Alternatively, you could configure DynamoDB with the AWS SDK. 
+Run the React app:
 
-9. Add Scripts to Package.json 
+bash
 
-In each package.json, add scripts to start your app. In client/package.json: 
+Copy code
 
-json 
+cd client
+npm start
 
-Copy code 
+Run the Express server:
 
-"scripts": { 
-  "start": "react-scripts start", 
-  "build": "react-scripts build" 
-} 
- 
+bash
 
-In backend/package.json: 
+Copy code
 
-json 
+cd ../backend
+npm start
 
-Copy code 
+11. VS Code Extensions for a Better Workflow
 
-"scripts": { 
-  "start": "node src/index.js" 
-} 
- 
+ESLint and Prettier: Code linting and formatting.
 
-10. Test Your Environment 
+REST Client: Test your APIs within VS Code.
 
-Run the React app: 
+MongoDB (optional): Manage MongoDB data directly in VS Code.
 
-bash 
-
-Copy code 
-
-cd client 
-npm start 
- 
-
-Run the Express server: 
-
-bash 
-
-Copy code 
-
-cd ../backend 
-npm start 
- 
-
-11. VS Code Extensions for a Better Workflow 
-
-ESLint and Prettier: Code linting and formatting. 
-
-REST Client: Test your APIs within VS Code. 
-
-MongoDB (optional): Manage MongoDB data directly in VS Code. 
-
-Firebase and AWS extensions: Handy for working with Firebase/AWS directly from VS Code. 
-
- 
+Firebase and AWS extensions: Handy for working with Firebase/AWS directly from VS Code.
